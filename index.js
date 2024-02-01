@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 const PORT = process.env.PORT || 9000
 const { v4: uuidv4 } = require('uuid');
-app.use('./public', express.static('public'))
+app.use('/public', express.static('public'));
 
 
 app.get('/', (req, res) => {
@@ -40,7 +40,7 @@ app.post ('/', (req,res) => {
         title: title,
         author: author,
         year: year,
-        image: './public/book.jpeg',
+        image: 'book.jpg',
         read: false,
 
     }
