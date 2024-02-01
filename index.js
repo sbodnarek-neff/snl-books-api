@@ -40,7 +40,7 @@ app.post ('/', (req,res) => {
         title: title,
         author: author,
         year: year,
-        image: 'book.jpg',
+        image: `http://localhost:${PORT}/public/book.jpg`,
         read: false,
 
     }
