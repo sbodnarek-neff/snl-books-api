@@ -33,12 +33,12 @@ app.patch("/:id", (req, res) => {
 });
 
 app.post ('/', (req,res) => {
-    const { title, author} = req.body;
+    const { title, author, year} = req.body;
     const addNewBook = {
         id: uuidv4(),
         title: title,
         author: author,
-        year: 2024,
+        year: year,
         image: "www.example.com",
         read: false,
 
